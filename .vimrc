@@ -1,4 +1,4 @@
-set nocompatible              " be iMproved, required
+﻿set nocompatible              " be iMproved, required
 filetype off                  " required
 
 set rtp+=G:/vundle 
@@ -335,3 +335,5 @@ let g:SignatureMap = {
 " ===
 let g:undotree_DiffAutoOpen = 0
 map L :UndotreeToggle<CR>
+
+
