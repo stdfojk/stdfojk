@@ -1,9 +1,9 @@
 ﻿set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set rtp+=G:/vundle 
+set rtp+=~/vim
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
-call vundle#begin('G:/bundle/')
+call vundle#begin()
 Plugin 'vim-airline/vim-airline'
 Plugin 'connorholyday/vim-snazzy'
 
@@ -129,58 +129,11 @@ set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
-noremap = nzz
-noremap - Nzz
-noremap <LEADER><CR> :nohlsearch<CR>
-
-noremap n h
-noremap u k
-noremap e j
-noremap i l
-noremap U 5k
-noremap E 5j
-noremap N 7h
-noremap I 7l
-" N key: go to the start of the line
-noremap <C-n> 0
-" I key: go to the end of the line
-noremap <C-i> $
-
-noremap k i
-noremap K I
-noremap l u
-
-inoremap ' ''<ESC>i
-inoremap ( ()<ESC>i
-inoremap { {<CR>}<ESC>i
 map s <nop
 map S :w<CR>
 map Q :q<CR>
 map R :source $MYVIMRC<CR>
 map ; :
-
-map si :set splitright<CR>:vsplit<CR>
-map sn :set nosplitright<CR>:vsplit<CR>
-map su :set nosplitbelow<CR>:split<CR>
-map se :set splitbelow<CR>:split<CR>
-
-map <LEADER>i <C-w>l
-map <LEADER>u <C-w>k
-map <LEADER>n <C-w>h
-map <LEADER>e <C-w>j
-
-map <up> :res +5<CR>
-map <down> :res -5<CR>
-map <left> :vertical resize-5<CR>
-map <right> :vertical resize+5<CR>
-
-map tu :tabe<CR>
-map tn :-tabnext<CR>
-map ti :+tabnext<CR>
-
-map sv <C-w>t<C-w>H
-map sh <C-w>t<C-w>K
-
 
 let g:SnazzyTransparent = 1
 color snazzy
